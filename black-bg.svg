@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="820">
   <!-- Черный фон -->
-  <rect width="1200" height="700" fill="#000000"/>
+  <rect width="600" height="820" fill="#000000"/>
   
   <!-- Зеленая окантовка -->
-  <rect x="10" y="10" width="1180" height="680" fill="none" stroke="#00ff00" stroke-width="4" rx="10"/>
+  <rect x="10" y="10" width="580" height="800" fill="none" stroke="#00ff00" stroke-width="4" rx="10"/>
   
   <!-- Текст с кодом, выровненный сверху слева -->
-  <text x="30" y="40" fill="#00ff00" font-family="'Courier New', monospace" font-size="15" text-anchor="start" xml:space="preserve">
+  <text x="30" y="30" fill="#00ff00" font-family="'Courier New', monospace" font-size="15" text-anchor="start" xml:space="preserve">
     <tspan x="30" dy="0">[1r1shmann@github.io]$ nano index.php</tspan>
     <tspan x="30" dy="16">&lt;?php</tspan>
     <tspan x="30" dy="16">/**</tspan>
@@ -16,7 +16,8 @@
     <tspan x="30" dy="16"> */</tspan>
     <tspan x="30" dy="16">class Dev</tspan>
     <tspan x="30" dy="16">{</tspan>
-    <tspan x="30" dy="16">    private $c = 95, $b = 0;</tspan>
+    <tspan x="30" dy="16">    private $c = 95;</tspan>
+    <tspan x="30" dy="16">    private $b = 0;</tspan>
     <tspan x="30" dy="16">    function __construct()</tspan>
     <tspan x="30" dy="16">    {</tspan>
     <tspan x="30" dy="16">        echo "☕ {$this-&gt;c}%\n";</tspan>
@@ -24,11 +25,18 @@
     <tspan x="30" dy="16">    function bug()</tspan>
     <tspan x="30" dy="16">    {</tspan>
     <tspan x="30" dy="16">        $this-&gt;b++;</tspan>
-    <tspan x="30" dy="16">        return $this-&gt;b &lt; 3 ? "Нашёл баг! Это фича." : "ВСЁ. Перезагрузка.";</tspan>
+    <tspan x="30" dy="16">        return $this-&gt;b &lt; 3</tspan>
+    <tspan x="30" dy="16">            ? 'Нашёл баг! Это фича.'</tspan>
+    <tspan x="30" dy="16">            : 'ВСЁ. Перезагрузка.';</tspan>
     <tspan x="30" dy="16">    }</tspan>
     <tspan x="30" dy="16">    function fix()</tspan>
     <tspan x="30" dy="16">    {</tspan>
-    <tspan x="30" dy="16">        return ['Перезагрузил', '// магия', 'StackOverflow', 'Переписал'][rand(0, 3)];</tspan>
+    <tspan x="30" dy="16">        return [</tspan>
+    <tspan x="30" dy="16">            'Перезагрузил',</tspan>
+    <tspan x="30" dy="16">            '// магия',</tspan>
+    <tspan x="30" dy="16">            'StackOverflow',</tspan>
+    <tspan x="30" dy="16">            'Переписал',</tspan>
+    <tspan x="30" dy="16">        ][rand(0, 3)];</tspan>
     <tspan x="30" dy="16">    }</tspan>
     <tspan x="30" dy="16">    function client()</tspan>
     <tspan x="30" dy="16">    {</tspan>
@@ -37,7 +45,8 @@
     <tspan x="30" dy="16">    }</tspan>
     <tspan x="30" dy="16">    function end()</tspan>
     <tspan x="30" dy="16">    {</tspan>
-    <tspan x="30" dy="16">        echo "\n🌙 Конец. Багов: {$this-&gt;b}\n✨ Завтра снова!\n";</tspan>
+    <tspan x="30" dy="16">        echo "\n🌙 Конец. Багов: " . $this-&gt;b;</tspan>
+    <tspan x="30" dy="16">        echo "\n✨ Завтра снова!\n";</tspan>
     <tspan x="30" dy="16">    }</tspan>
     <tspan x="30" dy="16">}</tspan>
     <tspan x="30" dy="16">$d = new Dev();</tspan>
@@ -51,7 +60,7 @@
   </text>
   
   <!-- Мигающий символ # (вместо курсора) -->
-  <text x="232" y="664" fill="#00ff00" font-family="'Courier New', monospace" font-size="15">
+  <text x="232" y="798" fill="#00ff00" font-family="'Courier New', monospace" font-size="15">
     <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
     █
   </text>
