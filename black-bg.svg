@@ -1,13 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400">
-  <rect width="1200" height="400" fill="#000000"/>
-  <rect x="10" y="10" width="1180" height="380" fill="none" stroke="#00ff00" stroke-width="4" rx="10"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800">
+  <!-- Черный фон -->
+  <rect width="1200" height="800" fill="#000000"/>
   
-  <text x="50%" y="50%" fill="#00ff00" font-family="'Courier New', monospace" font-size="28" text-anchor="middle" dominant-baseline="middle">
-    ~ $ загрузка системы...
+  <!-- Зеленая окантовка -->
+  <rect x="10" y="10" width="1180" height="780" fill="none" stroke="#00ff00" stroke-width="4" rx="10"/>
+  
+  <!-- Текст с кодом, выровненный сверху слева -->
+  <text x="30" y="40" fill="#00ff00" font-family="'Courier New', monospace" font-size="14" text-anchor="start">
+    <tspan x="30" dy="0">[1r1shmann@github.io]$ nano index.php</tspan>
+    <tspan x="30" dy="22">&lt;?php</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">/**</tspan>
+    <tspan x="30" dy="22"> * Привет!</tspan>
+    <tspan x="30" dy="22"> * </tspan>
+    <tspan x="30" dy="22"> * 🎋 バグ消えて / コードは流れる / 春の風</tspan>
+    <tspan x="30" dy="22"> * Баги ушли, код течёт — весенний ветер</tspan>
+    <tspan x="30" dy="22"> */</tspan>
+    <tspan x="30" dy="22">class Dev extends Reality</tspan>
+    <tspan x="30" dy="22">{</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">    private $coffee = 95;</tspan>
+    <tspan x="30" dy="22">    private $bugs = 0;</tspan>
+    <tspan x="30" dy="22">    private $mood = '😎';</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">    public function __construct()</tspan>
+    <tspan x="30" dy="22">    {</tspan>
+    <tspan x="30" dy="22">        echo "☕ Кофе: {$this-&gt;coffee}%\n";</tspan>
+    <tspan x="30" dy="22">    }</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">    public function findBug(): string</tspan>
+    <tspan x="30" dy="22">    {</tspan>
+    <tspan x="30" dy="22">        $this-&gt;bugs++;</tspan>
+    <tspan x="30" dy="22">        return $this-&gt;bugs &lt; 3 ? "Нашёл баг! Это фича." : "ВСЁ. Перезагружаю реальность.";</tspan>
+    <tspan x="30" dy="22">    }</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">    public function magicFix(): string</tspan>
+    <tspan x="30" dy="22">    {</tspan>
+    <tspan x="30" dy="22">        $fixes = [</tspan>
+    <tspan x="30" dy="22">            'Перезагрузил сервер',</tspan>
+    <tspan x="30" dy="22">            'Добавил // магия здесь',</tspan>
+    <tspan x="30" dy="22">            'StackOverflow помог',</tspan>
+    <tspan x="30" dy="22">            'Удалил и переписал'</tspan>
+    <tspan x="30" dy="22">        ];</tspan>
+    <tspan x="30" dy="22">        return $fixes[array_rand($fixes)];</tspan>
+    <tspan x="30" dy="22">    }</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">    public function explainToClient(): bool</tspan>
+    <tspan x="30" dy="22">    {</tspan>
+    <tspan x="30" dy="22">        echo "Клиент: 'Сделайте кнопку'\n";</tspan>
+    <tspan x="30" dy="22">        echo "Я: *внутренний крик*\n";</tspan>
+    <tspan x="30" dy="22">        return false;</tspan>
+    <tspan x="30" dy="22">    }</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">    public function endDay(): void</tspan>
+    <tspan x="30" dy="22">    {</tspan>
+    <tspan x="30" dy="22">        echo "\n🌙 День окончен.\n";</tspan>
+    <tspan x="30" dy="22">        echo "🐛 Багов: {$this-&gt;bugs}\n";</tspan>
+    <tspan x="30" dy="22">        echo "✨ Завтра новые приключения!\n";</tspan>
+    <tspan x="30" dy="22">    }</tspan>
+    <tspan x="30" dy="22">}</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">$dev = new Dev();</tspan>
+    <tspan x="30" dy="22">echo $dev-&gt;findBug() . "\n";</tspan>
+    <tspan x="30" dy="22">echo $dev-&gt;magicFix() . "\n";</tspan>
+    <tspan x="30" dy="22">$dev-&gt;endDay();</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">/*</tspan>
+    <tspan x="30" dy="22"> * P.S. Добро пожаловать в клуб любопытных! 🎉</tspan>
+    <tspan x="30" dy="22"> * https://1r1shmann.github.io</tspan>
+    <tspan x="30" dy="22"> */</tspan>
+    <tspan x="30" dy="22"></tspan>
+    <tspan x="30" dy="22">?&gt;</tspan>
   </text>
   
-  <!-- Мигающий курсор (блок) -->
-  <rect x="520" y="185" width="20" height="30" fill="#00ff00">
+  <!-- Мигающий курсор (блок) в конце кода -->
+  <rect x="30" y="760" width="10" height="16" fill="#00ff00">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
 </svg>
