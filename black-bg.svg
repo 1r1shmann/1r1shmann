@@ -1,58 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="820">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="470">
   <!-- Черный фон -->
-  <rect width="600" height="820" fill="#000000"/>
+  <rect width="600" height="470" fill="#000000"/>
   
   <!-- Зеленая окантовка -->
-  <rect x="10" y="10" width="580" height="800" fill="none" stroke="#00ff00" stroke-width="4" rx="10"/>
+  <rect x="10" y="10" width="580" height="450" fill="none" stroke="#00ff00" stroke-width="4" rx="10"/>
   
   <!-- Текст с кодом, выровненный сверху слева -->
   <text x="30" y="30" fill="#00ff00" font-family="'Courier New', monospace" font-size="15" text-anchor="start" xml:space="preserve">
-    <tspan x="30" dy="0">[1r1shmann@github.io]$ nano index.php</tspan>
+    <tspan x="30" dy="0">[1r1shmann@github.io]$ cat index.php</tspan>
     <tspan x="30" dy="16">&lt;?php</tspan>
-    <tspan x="30" dy="16">/**</tspan>
-    <tspan x="30" dy="16"> * Привет!</tspan>
-    <tspan x="30" dy="16"> * 🎋 バグ消えて / コードは流れる / 春の風</tspan>
-    <tspan x="30" dy="16"> *    Баги ушли, код течёт — весенний ветер</tspan>
+    <tspan x="30" dy="16">/*</tspan>
+    <tspan x="30" dy="16"> * オワコンと (Owakon to) «Устаревший хлам» —</tspan>
+    <tspan x="30" dy="16"> * 言われ続けて (Iware tsuzukete) Слышит он из года в год,</tspan>
+    <tspan x="30" dy="16"> * ウェブを創る (Webu o tsukuru) Но держит весь Веб.</tspan>
     <tspan x="30" dy="16"> */</tspan>
-    <tspan x="30" dy="16">class Dev</tspan>
-    <tspan x="30" dy="16">{</tspan>
-    <tspan x="30" dy="16">    private $c = 95;</tspan>
-    <tspan x="30" dy="16">    private $b = 0;</tspan>
-    <tspan x="30" dy="16">    function __construct()</tspan>
-    <tspan x="30" dy="16">    {</tspan>
-    <tspan x="30" dy="16">        echo "☕ {$this-&gt;c}%\n";</tspan>
+    <tspan x="30" dy="16">class Dev {</tspan>
+    <tspan x="30" dy="16">    private $mood = '😎';</tspan>
+    <tspan x="30" dy="16">    public function code(): string {</tspan>
+    <tspan x="30" dy="16">        $ok = rand(0, 1);</tspan>
+    <tspan x="30" dy="16">        $this->mood = $ok ? '😎' : '😱';</tspan>
+    <tspan x="30" dy="16">        return $ok ? '✅ Работает!' : '❌ Упало.';</tspan>
     <tspan x="30" dy="16">    }</tspan>
-    <tspan x="30" dy="16">    function bug()</tspan>
-    <tspan x="30" dy="16">    {</tspan>
-    <tspan x="30" dy="16">        $this-&gt;b++;</tspan>
-    <tspan x="30" dy="16">        return $this-&gt;b &lt; 3</tspan>
-    <tspan x="30" dy="16">            ? 'Нашёл баг! Это фича.'</tspan>
-    <tspan x="30" dy="16">            : 'ВСЁ. Перезагрузка.';</tspan>
-    <tspan x="30" dy="16">    }</tspan>
-    <tspan x="30" dy="16">    function fix()</tspan>
-    <tspan x="30" dy="16">    {</tspan>
-    <tspan x="30" dy="16">        return [</tspan>
-    <tspan x="30" dy="16">            'Перезагрузил',</tspan>
-    <tspan x="30" dy="16">            '// магия',</tspan>
-    <tspan x="30" dy="16">            'StackOverflow',</tspan>
-    <tspan x="30" dy="16">            'Переписал',</tspan>
-    <tspan x="30" dy="16">        ][rand(0, 3)];</tspan>
-    <tspan x="30" dy="16">    }</tspan>
-    <tspan x="30" dy="16">    function client()</tspan>
-    <tspan x="30" dy="16">    {</tspan>
-    <tspan x="30" dy="16">        echo "Клиент: 'Кнопку!'\nЯ: *крик*\n";</tspan>
-    <tspan x="30" dy="16">        return false;</tspan>
-    <tspan x="30" dy="16">    }</tspan>
-    <tspan x="30" dy="16">    function end()</tspan>
-    <tspan x="30" dy="16">    {</tspan>
-    <tspan x="30" dy="16">        echo "\n🌙 Конец. Багов: " . $this-&gt;b;</tspan>
-    <tspan x="30" dy="16">        echo "\n✨ Завтра снова!\n";</tspan>
+    <tspan x="30" dy="16">    public function blame(): string {</tspan>
+    <tspan x="30" dy="16">        if ($this->mood === '😱') {</tspan>
+    <tspan x="30" dy="16">            $v = ['Кэш', 'Браузер', 'Сервер'];</tspan>
+    <tspan x="30" dy="16">            return 'Виноват: ' . $v[rand(0, 2)];</tspan>
+    <tspan x="30" dy="16">        }</tspan>
     <tspan x="30" dy="16">    }</tspan>
     <tspan x="30" dy="16">}</tspan>
     <tspan x="30" dy="16">$d = new Dev();</tspan>
-    <tspan x="30" dy="16">echo $d-&gt;bug() . "\n" . $d-&gt;fix() . "\n";</tspan>
-    <tspan x="30" dy="16">$d-&gt;client();</tspan>
-    <tspan x="30" dy="16">$d-&gt;end();</tspan>
+    <tspan x="30" dy="16">echo $d->code() . "\n";</tspan>
+    <tspan x="30" dy="16">echo $d->blame() . "\n";</tspan>
     <tspan x="30" dy="16">/* P.S. https://1r1shmann.github.io 🎉 */</tspan>
     <tspan x="30" dy="16"></tspan>
     <tspan x="30" dy="16">?&gt;</tspan>
@@ -60,7 +38,7 @@
   </text>
   
   <!-- Мигающий символ # (вместо курсора) -->
-  <text x="232" y="798" fill="#00ff00" font-family="'Courier New', monospace" font-size="15">
+  <text x="232" y="446" fill="#00ff00" font-family="'Courier New', monospace" font-size="15">
     <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
     █
   </text>
